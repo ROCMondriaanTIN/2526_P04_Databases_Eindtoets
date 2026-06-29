@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toets</title>
+  <link rel="stylesheet" href="toets.css">
+</head>
+<body>
+  <main>
+<h1>P04 - Databases - Eindtoets</h1>
+<section class="question">
+<h2>Introductie</h2>
+<ul><li>Bij deze toets hoort een antwoordenblad 'Eindtoets Databases - 2025-2026, P4'. Vul je antwoorden in door het juiste bolletje grijs te kleuren.</li><li>Vouw/kreukel je antwoordenblad niet.</li><li>Maak het hele bolletje zwart/grijs met <em>potlood</em>.</li><li>Je hebt voor deze toets in totaal 1u.</li><li>De toets bestaat uit 50 meerkeuzevragen.</li><li>Je mag queries testen in phpMyAdmin of MariaDBeeeh:<ul><li>Met een tabel: <a href="https://septembertotseptember.nl/MariaDBeeeh/">https://septembertotseptember.nl/MariaDBeeeh/</a></li><li>Meer tabellen: <a href="https://septembertotseptember.nl/MariaDBeeeh/?mode=multiTable">https://septembertotseptember.nl/MariaDBeeeh/?mode=multiTable</a></li></ul></li><li>Het is niet toegestaan om A.I., in welke vorm ook, te gebruiken tijdens het maken van de toets.</li></ul>
+</section>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabel om vraag 1 t/m 6 te maken.</p>
+<p>Tabel <strong>Vluchten</strong>:</p>
+<table><thead><tr><th>id</th><th>bestemming</th><th>duur_min</th><th>prijs</th></tr></thead><tbody><tr><td>1</td><td>Rome</td><td>120</td><td>180</td></tr><tr><td>2</td><td>Oslo</td><td>140</td><td>220</td></tr><tr><td>3</td><td>Praag</td><td>95</td><td>130</td></tr><tr><td>4</td><td>Lissabon</td><td>165</td><td>260</td></tr><tr><td>5</td><td>Kopenhagen</td><td>100</td><td>150</td></tr></tbody></table>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 1</h2>
+<p>Wat is de juiste query om alle vluchten op te halen?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT ALL <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>FETCH * <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>GET * <br>FROM Vluchten</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 2</h2>
+<p>Welke query haalt alleen de kolom bestemming op?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Vluchten <br>WHERE bestemming</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>GET bestemming <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT Vluchten(bestemming)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT bestemming <br>FROM Vluchten</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 3</h2>
+<p>Welke query haalt bestemming en prijs op?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT bestemming, prijs <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT bestemming AND prijs <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT bestemming + prijs <br>FROM Vluchten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT (bestemming prijs) <br>FROM Vluchten</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 4</h2>
+<p>Welke query haalt alle vluchten op naar Rome?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Vluchten <br>IF bestemming = 'Rome'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Vluchten <br>WHERE bestemming == 'Rome'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Vluchten <br>HAVING 'Rome'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Vluchten <br>WHERE bestemming = 'Rome'</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 5</h2>
+<p>Welke query haalt vluchten op die langer duren dan 110 minuten?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Vluchten <br>WHERE duur_min &gt;= '110'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Vluchten <br>WHERE duur_min &gt; 110</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Vluchten <br>IF duur_min &gt; 110</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>WHERE duur_min &gt; 110 <br>FROM Vluchten</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 6</h2>
+<p>Welke query haalt alle vluchten op die NIET naar Oslo gaan?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Vluchten <br>WHERE bestemming NOT 'Oslo'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Vluchten <br>WHERE NOT bestemming 'Oslo'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Vluchten <br>WHERE bestemming != 'Oslo'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Vluchten <br>WHERE bestemming =! 'Oslo'</span></label></div>
+  </div>
+</div>
+<hr>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabel om vraag 7 t/m 12 te maken.</p>
+<p>Tabel <strong>Laptops</strong>:</p>
+<table><thead><tr><th>id</th><th>model</th><th>merk</th><th>voorraad</th><th>prijs</th></tr></thead><tbody><tr><td>1</td><td>A14</td><td>Novo</td><td>8</td><td>699</td></tr><tr><td>2</td><td>Z5</td><td>FastTech</td><td>0</td><td>999</td></tr><tr><td>3</td><td>M2</td><td>Novo</td><td>15</td><td>549</td></tr><tr><td>4</td><td>Q9</td><td>Byte</td><td>4</td><td>1199</td></tr><tr><td>5</td><td>L1</td><td>Byte</td><td>11</td><td>649</td></tr></tbody></table>
+</section>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 7</h2>
+<p>Welke query haalt alle modellen op?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Laptops.model</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT Laptops <br>WHERE model</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>GET model <br>FROM Laptops</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT model <br>FROM Laptops</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 8</h2>
+<p>Welke query haalt laptops op met prijs lager dan 700?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Laptops <br>WHERE prijs &lt;= '700'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Laptops <br>WHERE prijs &lt; 700</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Laptops <br>IF prijs &lt; 700</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>WHERE prijs &lt; 700</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 9</h2>
+<p>Welke query haalt laptops op van merk Novo met voorraad groter dan 10?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo' AND voorraad &gt; 10</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo' OR voorraad &gt; 10</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo', voorraad &gt; 10</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo' &amp;&amp; voorraad &gt; 10</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 10</h2>
+<p>Welke query haalt laptops op van merk Novo OF Byte?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo' AND merk = 'Byte'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo' OR 'Byte'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk IN 'Novo', 'Byte'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Laptops <br>WHERE merk = 'Novo' OR merk = 'Byte'</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 11</h2>
+<p>Welke query haalt laptops op met een prijs hoger dan 600 en lager dan 1000?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Laptops <br>WHERE prijs &gt; 600 OR prijs &lt; 1000</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Laptops <br>WHERE 600 &lt;= prijs &lt;= 1000</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Laptops <br>WHERE prijs &gt;= 600 AND prijs &lt;= 1000</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Laptops <br>WHERE prijs BETWEEN 600 OR 1000</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 12</h2>
+<p>Welke query geeft model en prijs van laptops met voorraad groter dan 5?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT model AND prijs <br>FROM Laptops <br>WHERE voorraad &gt; 5</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT model, prijs <br>FROM Laptops <br>WHERE voorraad &gt; 5</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT (model, prijs) <br>FROM Laptops <br>IF voorraad &gt; 5</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT model prijs <br>FROM Laptops <br>WHERE voorraad &gt; 5</span></label></div>
+  </div>
+</div>
+<hr>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabel om vraag 13 t/m 18 te maken.</p>
+<p>Tabel <strong>Abonnees</strong>:</p>
+<table><thead><tr><th>id</th><th>naam</th><th>type</th><th>maanden</th><th>actief</th></tr></thead><tbody><tr><td>1</td><td>Ravi</td><td>basis</td><td>2</td><td>1</td></tr><tr><td>2</td><td>Esra</td><td>plus</td><td>14</td><td>1</td></tr><tr><td>3</td><td>Nina</td><td>basis</td><td>9</td><td>0</td></tr><tr><td>4</td><td>Luca</td><td>pro</td><td>20</td><td>1</td></tr><tr><td>5</td><td>Mert</td><td>plus</td><td>3</td><td>0</td></tr></tbody></table>
+</section>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 13</h2>
+<p>Welke query haalt actieve abonnees op?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Abonnees <br>WHERE actief IS 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Abonnees <br>WHERE actief == NULL</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Abonnees <br>WHERE actief EMPTY</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Abonnees <br>WHERE actief = 1</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 14</h2>
+<p>Welke query haalt abonnees op die langer dan 12 maanden lid zijn?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Abonnees <br>WHERE maanden &gt;= '12'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Abonnees <br>IF maanden &gt; 12</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Abonnees <br>WHERE maanden &gt; 12</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>WHERE maanden &gt; 12 <br>FROM Abonnees</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 15</h2>
+<p>Welke query wijzigt het type van id 1 naar plus?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>UPDATE Abonnees <br>WHERE id = 1 <br>SET type = 'plus'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>UPDATE Abonnees <br>SET type = 'plus' <br>WHERE id = 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>UPDATE type = 'plus' <br>FROM Abonnees <br>WHERE id = 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SET Abonnees type = 'plus' <br>WHERE id = 1</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 16</h2>
+<p>Welke query verlaagt maanden van alle plus-abonnees met 1?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>UPDATE Abonnees SET maanden -= 1 <br>WHERE type = 'plus'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>UPDATE Abonnees SET maanden = -1 <br>WHERE type = 'plus'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>UPDATE maanden <br>FROM Abonnees <br>WHERE type = 'plus'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>UPDATE Abonnees SET maanden = maanden - 1 <br>WHERE type = 'plus'</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 17</h2>
+<p>Welke query verwijdert alle inactieve abonnees?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>DELETE * <br>FROM Abonnees <br>WHERE actief = 0</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>REMOVE <br>FROM Abonnees <br>WHERE actief = 0</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>DELETE <br>FROM Abonnees <br>WHERE actief = 0</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>DELETE Abonnees <br>WHERE actief = 0</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 18</h2>
+<p>Welke query haalt naam en type op van abonnees met actief = 1 EN maanden &gt; 5?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT naam, type <br>FROM Abonnees <br>WHERE actief = 1 AND maanden &gt; 5</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT naam, type <br>FROM Abonnees <br>WHERE actief = 1 OR maanden &gt; 5</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT naam AND type <br>FROM Abonnees <br>WHERE actief = 1 AND maanden &gt; 5</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT naam, type <br>WHERE actief = 1 AND maanden &gt; 5 <br>FROM Abonnees</span></label></div>
+  </div>
+</div>
+<hr>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabel om vraag 19 t/m 24 te maken.</p>
+<p>Tabel <strong>Pakketten</strong>:</p>
+<table><thead><tr><th>id</th><th>code</th><th>stad</th><th>gewicht</th></tr></thead><tbody><tr><td>1</td><td>PK101</td><td>Breda</td><td>2</td></tr><tr><td>2</td><td>PK102</td><td>Tilburg</td><td>5</td></tr><tr><td>3</td><td>PK103</td><td>Breda</td><td>8</td></tr><tr><td>4</td><td>PK104</td><td>Nijmegen</td><td>1</td></tr><tr><td>5</td><td>PK105</td><td>Tilburg</td><td>3</td></tr></tbody></table>
+</section>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 19</h2>
+<p>Welke query voegt pakket PK106 naar Breda met gewicht 4 toe?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>INSERT Pakketten <br>SET code = 'PK106', stad = 'Breda', gewicht = 4</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>INSERT INTO Pakketten (code, stad, gewicht) <br>VALUES ('PK106', 'Breda', 4)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>INSERT INTO Pakketten <br>VALUES (code='PK106', stad='Breda', gewicht=4)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>ADD TO Pakketten ('PK106', 'Breda', 4)</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 20</h2>
+<p>Welke query is een geldige INSERT voor Pakketten?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>INSERT VALUES ('PK107', 'Arnhem', 6) INTO Pakketten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>INSERT INTO Pakketten <br>('PK107', 'Arnhem', 6)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>INSERT Pakketten <br>('PK107', 'Arnhem', 6)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>INSERT INTO Pakketten <br>VALUES ('PK107', 'Arnhem', 6)</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 21</h2>
+<p>Welke query verwijdert pakket met id 4?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>DELETE Pakketten <br>WHERE id = 4</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>REMOVE <br>FROM Pakketten <br>WHERE id = 4</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>DELETE <br>FROM Pakketten <br>WHERE id = 4</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>DELETE * <br>FROM Pakketten <br>WHERE id = 4</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 22</h2>
+<p>Welke query verwijdert alle pakketten naar Tilburg?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>DELETE <br>FROM Pakketten <br>WHERE stad = 'Tilburg'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>DELETE * <br>FROM Pakketten <br>WHERE stad = 'Tilburg'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>DELETE Pakketten.stad = 'Tilburg'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>DROP <br>FROM Pakketten <br>WHERE stad = 'Tilburg'</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 23</h2>
+<p>Welke query verwijdert ALLE rijen uit Pakketten?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>DELETE * <br>FROM Pakketten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>DELETE Pakketten ALL</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>CLEAR Pakketten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>DELETE <br>FROM Pakketten</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 24</h2>
+<p>Welke query haalt pakketten op naar Breda die zwaarder zijn dan 3?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Pakketten <br>WHERE stad = 'Breda' AND gewicht &gt; 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Pakketten <br>WHERE stad = 'Breda' OR gewicht &gt; 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Pakketten <br>WHERE stad = Breda AND gewicht &gt; 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Pakketten <br>HAVING stad = 'Breda' AND gewicht &gt; 3</span></label></div>
+  </div>
+</div>
+<hr>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabel om vraag 25 t/m 30 te maken.</p>
+<p>Tabel <strong>Consultants</strong>:</p>
+<table><thead><tr><th>id</th><th>naam</th><th>team</th><th>uurtarief</th><th>jaren</th></tr></thead><tbody><tr><td>1</td><td>Ilyas</td><td>Data</td><td>85</td><td>3</td></tr><tr><td>2</td><td>Sana</td><td>Cloud</td><td>95</td><td>5</td></tr><tr><td>3</td><td>Yara</td><td>Data</td><td>110</td><td>8</td></tr><tr><td>4</td><td>Owen</td><td>UX</td><td>70</td><td>2</td></tr><tr><td>5</td><td>Pim</td><td>Cloud</td><td>90</td><td>9</td></tr></tbody></table>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 25</h2>
+<p>Welke query voegt consultant Nox toe in team Data met tarief 88 en 1 jaar ervaring?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>INSERT INTO Consultants <br>VALUES naam='Nox', team='Data', uurtarief=88, jaren=1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>INSERT INTO Consultants (naam, team, uurtarief, jaren) <br>VALUES ('Nox', 'Data', 88, 1)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>INSERT Consultants ('Nox', 'Data', 88, 1)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>ADD Consultants ('Nox', 'Data', 88, 1)</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 26</h2>
+<p>Welke query verhoogt het tarief van team Data met 5?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>UPDATE Consultants SET uurtarief + 5 <br>WHERE team = 'Data'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>UPDATE Consultants uurtarief = +5 <br>WHERE team = 'Data'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>UPDATE Consultants SET uurtarief = uurtarief + 5 <br>WHERE team = 'Data'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SET Consultants.uurtarief += 5 <br>WHERE team = 'Data'</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 27</h2>
+<p>Welke query verwijdert consultants met minder dan 3 jaren ervaring?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>DELETE * <br>FROM Consultants <br>WHERE jaren &lt; 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>DELETE Consultants <br>IF jaren &lt; 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>REMOVE Consultants <br>WHERE jaren &lt; 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>DELETE <br>FROM Consultants <br>WHERE jaren &lt; 3</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 28</h2>
+<p>Welke query haalt consultants op met meer dan 5 jaren OF uurtarief boven 100?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Consultants <br>WHERE jaren &gt; 5 OR uurtarief &gt; 100</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Consultants <br>WHERE jaren &gt; 5 AND uurtarief &gt; 100</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Consultants <br>WHERE jaren &gt; 5, uurtarief &gt; 100</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Consultants <br>IF jaren &gt; 5 OR uurtarief &gt; 100</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 29</h2>
+<p>Welke query zet het uurtarief van Sana op 100?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>UPDATE uurtarief = 100 IN Consultants <br>WHERE naam = 'Sana'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>UPDATE Consultants(uurtarief) = 100 <br>WHERE naam = 'Sana'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>UPDATE Consultants SET uurtarief = 100 <br>WHERE naam = 'Sana'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SET Consultants uurtarief 100 <br>WHERE naam = 'Sana'</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 30</h2>
+<p>Welke query verwijdert consultant Pim uit team Cloud?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>DELETE <br>FROM Consultants <br>WHERE naam = 'Pim' OR team = 'Cloud'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>DELETE <br>FROM Consultants <br>WHERE naam = 'Pim' AND team = 'Cloud'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>DELETE Consultants.naam = 'Pim', Consultants.team = 'Cloud'</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>DELETE * <br>FROM Consultants <br>WHERE naam = 'Pim' AND team = 'Cloud'</span></label></div>
+  </div>
+</div>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabel om vraag 31 t/m 35 te maken.</p>
+<p>Tabel <strong>Podcasts</strong>:</p>
+<table><thead><tr><th>id</th><th>titel</th><th>maker</th><th>jaar</th><th>score</th></tr></thead><tbody><tr><td>1</td><td>DataPraat</td><td>M. Vos</td><td>2021</td><td>8.1</td></tr><tr><td>2</td><td>CloudCast</td><td>K. Noor</td><td>2019</td><td>7.4</td></tr><tr><td>3</td><td>UX Uur</td><td>P. Taal</td><td>2023</td><td>8.7</td></tr><tr><td>4</td><td>OpsTalk</td><td>J. Smit</td><td>2020</td><td>7.9</td></tr><tr><td>5</td><td>QueryLab</td><td>R. Kaya</td><td>2022</td><td>8.5</td></tr><tr><td>6</td><td>TechKort</td><td>A. Groen</td><td>2018</td><td>7.1</td></tr></tbody></table>
+</section>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 31</h2>
+<p>Welke query sorteert podcasts van laagste naar hoogste score?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Podcasts <br>SORT BY score</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Podcasts <br>ORDER score ASC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY score DESC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY score ASC</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 32</h2>
+<p>Welke query sorteert podcasts van nieuw naar oud?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY jaar DESC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY jaar ASC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Podcasts <br>SORT jaar DESC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Podcasts <br>ORDER DESC jaar</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 33</h2>
+<p>Welke query geeft de 3 hoogst beoordeelde podcasts?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT TOP 3 * <br>FROM Podcasts <br>ORDER BY score DESC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Podcasts LIMIT 3 <br>ORDER BY score DESC</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY score DESC <br>LIMIT 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY score <br>LIMIT 3</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 34</h2>
+<p>Welke query slaat eerst 1 podcast over en geeft daarna 3 podcasts (gesorteerd op titel)?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY titel <br>OFFSET 3 <br>LIMIT 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY titel <br>LIMIT 3 <br>OFFSET 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY titel <br>SKIP 1 <br>LIMIT 3</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY titel <br>LIMIT 1, <br>OFFSET 3</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 35</h2>
+<p>Je toont podcasts per pagina, 2 per pagina. Welke query hoort bij pagina 3?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY id <br>LIMIT 2 <br>OFFSET 4</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY id <br>LIMIT 2 <br>OFFSET 2</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY id <br>LIMIT 2 <br>OFFSET 6</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT * <br>FROM Podcasts <br>ORDER BY id <br>LIMIT 3 <br>OFFSET 2</span></label></div>
+  </section>
+  </div>
+</div>
+<hr>
+<section class="question">
+<h2>Vraag 36</h2>
+<p>Welke query maakt een nieuwe database planning_app?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>CREATE DB planning_app</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>NEW DATABASE planning_app</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>MAKE DATABASE planning_app</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>CREATE DATABASE planning_app</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 37</h2>
+<p>Welke query maakt een tabel Taken met kolommen id (integer, primary key) en titel (tekst)?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>CREATE Taken (id INT PRIMARY, titel TEXT)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>NEW TABLE Taken (id INT KEY, titel VARCHAR(120))</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>CREATE TABLE Taken (id INT PRIMARY KEY, titel VARCHAR(120))</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>CREATE TABLE Taken {id INT PRIMARY KEY, titel VARCHAR(120)}</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 38</h2>
+<p>Welke query maakt een tabel Sessies met auto-oplopend id?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>CREATE TABLE Sessies (id INT AUTO PRIMARY KEY, duur DECIMAL(10,2))</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>CREATE TABLE Sessies (id INT AUTO_INCREMENT PRIMARY KEY, duur DECIMAL(10,2))</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>CREATE TABLE Sessies (id AUTO INT PRIMARY KEY, duur DECIMAL(10,2))</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>CREATE TABLE Sessies (id INT INCREMENT KEY, duur DECIMAL(10,2))</span></label></div>
+</section>
+<hr>
+<div class="exam-block">
+  <div class="exam-block__table">
+<p>Gebruik de onderstaande tabellen om vraag 39 t/m 50 te maken.</p>
+<p>Tabel <strong>Teams</strong>:</p>
+<table><thead><tr><th>id</th><th>naam</th><th>regio</th></tr></thead><tbody><tr><td>1</td><td>Atlas</td><td>Noord</td></tr><tr><td>2</td><td>Nova</td><td>Zuid</td></tr><tr><td>3</td><td>Pixel</td><td>Oost</td></tr><tr><td>4</td><td>Delta</td><td>West</td></tr></tbody></table>
+<p>Tabel <strong>Projecten</strong>:</p>
+<table><thead><tr><th>id</th><th>titel</th><th>manager</th></tr></thead><tbody><tr><td>10</td><td>Portal</td><td>Jans</td></tr><tr><td>20</td><td>Mobile</td><td>Piet</td></tr><tr><td>30</td><td>Infra</td><td>Roos</td></tr></tbody></table>
+<p>Tabel <strong>Toewijzingen</strong>:</p>
+<table><thead><tr><th>team_id</th><th>project_id</th><th>uren</th></tr></thead><tbody><tr><td>1</td><td>10</td><td>40</td></tr><tr><td>1</td><td>20</td><td>30</td></tr><tr><td>2</td><td>10</td><td>25</td></tr><tr><td>3</td><td>30</td><td>50</td></tr><tr><td>4</td><td>20</td><td>20</td></tr><tr><td>4</td><td>30</td><td>35</td></tr></tbody></table>
+<p>Tabel <strong>Facturen</strong>:</p>
+<table><thead><tr><th>id</th><th>categorie</th><th>account</th><th>bedrag</th></tr></thead><tbody><tr><td>1</td><td>Implementatie</td><td>A1</td><td>1200</td></tr><tr><td>2</td><td>Implementatie</td><td>A1</td><td>800</td></tr><tr><td>3</td><td>Support</td><td>B2</td><td>300</td></tr><tr><td>4</td><td>Support</td><td>C3</td><td>700</td></tr><tr><td>5</td><td>Training</td><td>D4</td><td>500</td></tr></tbody></table>
+  </div>
+  <div class="exam-block__questions">
+<section class="question">
+<h2>Vraag 39</h2>
+<p>Welke relatie is er tussen Teams en Projecten?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>veel-op-veel (N-N)</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>1-op-1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>1-op-veel</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>geen relatie</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 40</h2>
+<p>Welke tabel is de koppel- of tussentabel in dit model?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>Teams</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>Projecten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>Facturen</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>Toewijzingen</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 41</h2>
+<p>Welke query geeft per toewijzing de teamnaam en projecttitel?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT Teams.naam, Projecten.titel <br>FROM Teams, Projecten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT Teams.naam, Projecten.titel <br>FROM Toewijzingen <br>JOIN Teams ON Toewijzingen.team_id = Teams.id <br>JOIN Projecten ON Toewijzingen.project_id = Projecten.id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT Teams.naam, Projecten.titel <br>FROM Toewijzingen <br>JOIN Teams <br>JOIN Projecten</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT naam, titel <br>FROM Teams + Projecten + Toewijzingen</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 42</h2>
+<p>Welke query geeft per project het aantal teams dat erop werkt?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT project_id, COUNT(*) <br>FROM Toewijzingen <br>ORDER BY project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT COUNT(project_id) <br>FROM Toewijzingen <br>WHERE GROUP BY project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT project_id, COUNT(*) <br>FROM Toewijzingen <br>GROUP BY project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT project_id, TOTAL(*) <br>FROM Toewijzingen <br>GROUP project_id</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 43</h2>
+<p>Welke query geeft het gemiddelde aantal uren per project?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT project_id, AVG(uren) <br>FROM Toewijzingen <br>GROUP BY project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT project_id, AVG(uren) <br>FROM Toewijzingen <br>HAVING project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT AVG(uren), project_id <br>FROM Toewijzingen</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT project_id, MEAN(uren) <br>FROM Toewijzingen <br>GROUP BY project_id</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 44</h2>
+<p>Welke query geeft per categorie de totale factuurwaarde?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT categorie, SUM(bedrag) <br>FROM Facturen <br>ORDER BY categorie</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT categorie, SUM(bedrag) <br>FROM Facturen <br>GROUP BY categorie</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT SUM(categorie), bedrag <br>FROM Facturen <br>GROUP BY bedrag</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT categorie, TOTAL(bedrag) <br>FROM Facturen <br>GROUP BY categorie</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 45</h2>
+<p>Welke query toont alleen projecten met meer dan 1 team?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT project_id, COUNT(*) <br>FROM Toewijzingen <br>WHERE COUNT(*) &gt; 1 <br>GROUP BY project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT project_id, COUNT(*) <br>FROM Toewijzingen <br>GROUP BY project_id <br>HAVING COUNT(*) &gt; 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT project_id <br>FROM Toewijzingen <br>HAVING COUNT(*) &gt; 1</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT project_id, COUNT(*) <br>FROM Toewijzingen <br>GROUP project_id <br>HAVING COUNT(*) &gt; 1</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 46</h2>
+<p>Welke query toont alleen projecten met gemiddeld minimaal 30 uren?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT project_id, AVG(uren) <br>FROM Toewijzingen <br>WHERE AVG(uren) &gt;= 30 <br>GROUP BY project_id</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT AVG(uren) <br>FROM Toewijzingen <br>HAVING AVG(uren) &gt;= 30</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT project_id, AVG(uren) <br>FROM Toewijzingen <br>GROUP BY project_id <br>HAVING AVG(uren) &gt;= 30</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT project_id, AVG(uren) <br>FROM Toewijzingen <br>GROUP BY project_id <br>WHERE AVG(uren) &gt;= 30</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 47</h2>
+<p>Welke query geeft per account het hoogste factuurbedrag?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT account, MAX(bedrag) <br>FROM Facturen <br>GROUP BY account</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT account, HIGH(bedrag) <br>FROM Facturen <br>GROUP BY account</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT MAX(account), bedrag <br>FROM Facturen <br>GROUP BY bedrag</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT account, MAX(bedrag) <br>FROM Facturen <br>ORDER BY account</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 48</h2>
+<p>Welke query telt hoeveel verschillende projecten in totaal zijn toegewezen?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT COUNT(DISTINCT project_id) <br>FROM Toewijzingen</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT DISTINCT COUNT(project_id) <br>FROM Toewijzingen</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT COUNT(project_id DISTINCT) <br>FROM Toewijzingen</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT TOTAL(DISTINCT project_id) <br>FROM Toewijzingen</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 49</h2>
+<p>Welke query toont categorieen met totale waarde groter dan 1000?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>SELECT categorie, SUM(bedrag) <br>FROM Facturen <br>WHERE SUM(bedrag) &gt; 1000 <br>GROUP BY categorie</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>SELECT categorie, SUM(bedrag) <br>FROM Facturen <br>GROUP BY categorie <br>HAVING SUM(bedrag) &gt; 1000</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>SELECT categorie, SUM(bedrag) <br>FROM Facturen <br>GROUP categorie <br>HAVING SUM(bedrag) &gt; 1000</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>SELECT categorie, TOTAL(bedrag) <br>FROM Facturen <br>GROUP BY categorie <br>HAVING TOTAL(bedrag) &gt; 1000</span></label></div>
+</section>
+<section class="question">
+<h2>Vraag 50</h2>
+<p>Wat is de functie van HAVING in combinatie met GROUP BY?</p>
+<div class="answers"><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">A</span> <span>HAVING filtert groepen nadat ze zijn gevormd.</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">B</span> <span>HAVING filtert losse rijen voor de groepering.</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">C</span> <span>HAVING bepaalt de sorteervolgorde van groepen.</span></label><label class="answer-item"><input type="checkbox" disabled><span class="answer-letter">D</span> <span>HAVING beperkt het aantal kolommen in SELECT.</span></label></div>
+</section>
+  </div>
+</div>
+  </main>
+</body>
+</html>
